@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.pajk.bigdata.wechat.bos.ReceiveXmlEntity;
 import com.pajk.bigdata.wechat.service.FormatService;
+import com.pajk.bigdata.wechat.service.MedicalService;
 import com.pajk.bigdata.wechat.service.ReceiveService;
 
 @Controller
@@ -30,6 +31,8 @@ public class ApiController {
     private ReceiveService receiveService;
     @Autowired
     private FormatService formatService;
+    @Autowired
+   	private MedicalService medicalService;
     
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
@@ -67,10 +70,13 @@ public class ApiController {
         /** 解析xml数据 */  
         ReceiveXmlEntity xmlEntity = receiveService.getMsgEntity(xml);  
         LOG.info("receive frome : " + xmlEntity.getFromUserName() + ", content: " + xmlEntity.getContent());
+        
+        String word = medicalService.queryWords(xmlEntity.getContent());
+        
         String result = formatService.formatXmlAnswer(
         		xmlEntity.getFromUserName(), 
         		xmlEntity.getToUserName(), 
-        		xmlEntity.getContent());  
+        		word);  
 
         try {  
             OutputStream os = response.getOutputStream();  

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pajk.bigdata.wechat.dao.MedicalDAO">
+	
+	<select id="queryWords" parameterType="String" resultType="MedicalDO">
+	   SELECT
+	        id, rank,frequency,word,type 
+	   FROM cecil_medicine_word 
+	   WHERE Word LIKE CONCAT(CONCAT('%',#{word}),'%') 
+       ORDER BY RANK, TYPE DESC LIMIT 5;
+	</select>
+	
+	<select id="countWords" parameterType="String" resultType="Integer">
+       SELECT
+            COUNT(1)
+       FROM cecil_medicine_word 
+       WHERE Word LIKE CONCAT(CONCAT('%',#{word}),'%') 
+    </select>
+    
+</mapper>
