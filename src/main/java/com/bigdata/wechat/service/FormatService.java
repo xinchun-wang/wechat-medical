@@ -1,4 +1,4 @@
-package com.pajk.bigdata.wechat.service;
+package com.bigdata.wechat.service;
 
 import java.util.Date;
 

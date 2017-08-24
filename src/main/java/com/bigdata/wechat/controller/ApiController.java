@@ -1,4 +1,4 @@
-package com.pajk.bigdata.wechat.controller;
+package com.bigdata.wechat.controller;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,6 +9,7 @@ import java.io.OutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.bigdata.wechat.service.MedicalService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +19,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.pajk.bigdata.wechat.bos.ReceiveXmlEntity;
-import com.pajk.bigdata.wechat.service.FormatService;
-import com.pajk.bigdata.wechat.service.MedicalService;
-import com.pajk.bigdata.wechat.service.ReceiveService;
+import com.bigdata.wechat.bos.ReceiveXmlEntity;
+import com.bigdata.wechat.service.FormatService;
+import com.bigdata.wechat.service.ReceiveService;
 
 @Controller
 @RequestMapping("/api")  

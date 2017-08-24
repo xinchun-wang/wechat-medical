@@ -1,4 +1,4 @@
-package com.pajk.bigdata.wechat.util;
+package com.bigdata.wechat.util;
 
 import java.io.IOException;
 import java.io.StringWriter;

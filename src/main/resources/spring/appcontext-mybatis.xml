@@ -26,7 +26,7 @@
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.pajk.bigdata.wechat.dao" />
+		<property name="basePackage" value="com.bigdata.wechat.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sessionFactory" />
 	</bean>
 		

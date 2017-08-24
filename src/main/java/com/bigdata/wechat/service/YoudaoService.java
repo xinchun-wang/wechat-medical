@@ -1,4 +1,4 @@
-package com.pajk.bigdata.wechat.service;
+package com.bigdata.wechat.service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pajk.bigdata.wechat.util.Constants;
+import com.bigdata.wechat.util.Constants;
 
 @Service
 public class YoudaoService {

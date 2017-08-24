@@ -1,4 +1,4 @@
-package com.pajk.bigdata.wechat.util;
+package com.bigdata.wechat.util;
 
 public class Constants {
 	public static final String us_phonetic = "us-phonetic";

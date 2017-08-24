@@ -1,16 +1,15 @@
-package com.pajk.bigdata.wechat.service;
+package com.bigdata.wechat.service;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Iterator;
 
+import com.bigdata.wechat.bos.ReceiveXmlEntity;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
-import com.pajk.bigdata.wechat.bos.ReceiveXmlEntity;
 
 @Service
 public class ReceiveService {
@@ -21,7 +20,7 @@ public class ReceiveService {
      * @param strXml 
      * @return 
      */  
-    public ReceiveXmlEntity getMsgEntity(String strXml){  
+    public ReceiveXmlEntity getMsgEntity(String strXml){
         ReceiveXmlEntity msg = null;  
         try {  
             if (strXml.length() <= 0 || strXml == null)  
@@ -38,7 +37,7 @@ public class ReceiveService {
             msg = new ReceiveXmlEntity();  
             //利用反射机制，调用set方法  
             //获取该实体的元类型  
-            Class<?> c = Class.forName("com.pajk.bigdata.wechat.bos.ReceiveXmlEntity");  
+            Class<?> c = Class.forName("com.bigdata.wechat.bos.ReceiveXmlEntity");
             msg = (ReceiveXmlEntity)c.newInstance();//创建这个实体的对象  
             while(iter.hasNext()){  
                 Element ele = (Element)iter.next();  

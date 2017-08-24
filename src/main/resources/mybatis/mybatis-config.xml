@@ -5,7 +5,7 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias alias="MedicalDO" type="com.pajk.bigdata.wechat.dos.MedicalDO" />
+		<typeAlias alias="MedicalDO" type="com.bigdata.wechat.dos.MedicalDO" />
 	</typeAliases>
 	
 	<mappers>

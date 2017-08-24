@@ -1,4 +1,4 @@
-package com.pajk.bigdata.wechat.dos;
+package com.bigdata.wechat.dos;
 
 public class MedicalDO {
 	private int id;

@@ -1,9 +1,8 @@
-package com.pajk.bigdata.wechat.service;
+package com.bigdata.wechat.service;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -18,13 +17,12 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.pajk.bigdata.wechat.util.JSONUtil;
+import com.bigdata.wechat.util.JSONUtil;
 
 /**
  * 请求Rest相关信息

@@ -1,4 +1,4 @@
-package com.pajk.bigdata.wechat.bos;
+package com.bigdata.wechat.bos;
 
 public class ReceiveXmlEntity {
 	private String ToUserName="";  

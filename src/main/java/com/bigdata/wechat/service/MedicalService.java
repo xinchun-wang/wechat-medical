@@ -1,4 +1,4 @@
-package com.pajk.bigdata.wechat.service;
+package com.bigdata.wechat.service;
 
 import java.util.List;
 import java.util.Map;
@@ -6,9 +6,9 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pajk.bigdata.wechat.dao.MedicalDAO;
-import com.pajk.bigdata.wechat.dos.MedicalDO;
-import com.pajk.bigdata.wechat.util.Constants;
+import com.bigdata.wechat.dao.MedicalDAO;
+import com.bigdata.wechat.dos.MedicalDO;
+import com.bigdata.wechat.util.Constants;
 
 @Service
 public class MedicalService {
